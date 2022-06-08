@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,500&display=swap');
+
 * {
-    margin: 0;
+    margin: 5;
     padding: 0;
     border: 0;
     outline: 0;
@@ -13,6 +15,122 @@
     --color-text: #FEF8EC;
     --color-bg-variant: #34495B;
     --color-call-to-action: #F06449;
+    --color-call-to-action-hover: #f47a58;
     --color-accent-1: #FDF0D5;
     --color-accent-2: #C6D8D3;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --containter-width-sm: 90%;
+
+    --transition-duration: all 350ms ease;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    /* TODO: Add background Texture */
+}
+
+/* _____GENERAL STYLES ________ */
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size:2.6rem;
+}
+
+component {
+    margin-top: 8rem;
+}
+
+component > h2, 
+section > h5 {
+    text-align: center;
+    color: var(--color-text);
+}
+
+section > h2 {
+    color: var(--color-accent-1);
+}
+
+.text-light {
+    color: var(--color-text);
+    font-size: 1.4rem;
+}
+
+a {
+    color: var(--color-text);
+    transition: var(--transition-duration)
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-call-to-action);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition-duration);
+}
+
+.btn:hover {
+    background-color: var(--color-call-to-action-hover);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* _____ MEDIA QUERY (MEDIUM DEVICE) _____ */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: var(--container-width-md)
+    }
+
+    section {
+        margin-top: 6.5rem;
+    }
+}
+
+/* _____ MEDIA QUERY (SMALL/MOBILE DEVICE) _____ */
+@media screen and (min-width: 600px) {
+    .container {
+        width: var(--containter-width-sm)
+    }
+
+    section {
+        margin-top: 4rem;
+    }
+
+    section > h2{
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+
