@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,500&display=swap');
 
 * {
-    margin: 5;
+    margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
@@ -13,6 +13,7 @@
 :root {
     --color-bg: #202C39;
     --color-text: #FEF8EC;
+    --color-text-alt: #c3a88f;
     --color-bg-variant: #34495B;
     --color-call-to-action: #F06449;
     --color-call-to-action-hover: #f47a58;
@@ -24,6 +25,13 @@
     --containter-width-sm: 90%;
 
     --transition-duration: all 350ms ease;
+
+    --button-padding: 0.4rem .9rem;
+    --button-font-size: 1.3rem;
+    --button-font-weight: bold;
+    --button-transition-padding: 0.5rem 1rem;
+    --button-transition-text-size: 1.4rem;
+    --button-border-radius: 0.1rem;
 }
 
 html {
@@ -39,6 +47,7 @@ body {
     background: var(--color-bg);
     color: var(--color-text);
     line-height: 1.5;
+    margin-left: 20%;
     /* TODO: Add background Texture */
 }
 
@@ -46,7 +55,10 @@ body {
 
 .container {
     width: var(--container-width-lg);
-    margin: 0 auto;
+}
+
+.header {
+    margin-top: 12rem;
 }
 
 h1,
@@ -55,20 +67,30 @@ h3,
 h4,
 h5 {
     font-weight: 500;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 h1 {
-    font-size:2.6rem;
+    font-size:3.4rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0rem;
 }
 
-component {
+h5 {
+    font-style: italic;
+}
+
+section {
     margin-top: 8rem;
 }
 
-component > h2, 
+section > h2, 
 section > h5 {
     text-align: center;
     color: var(--color-text);
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 section > h2 {
@@ -76,7 +98,7 @@ section > h2 {
 }
 
 .text-light {
-    color: var(--color-text);
+    color: var(--color-text-alt);
     font-size: 1.4rem;
 }
 
@@ -88,15 +110,45 @@ a {
 .btn {
     width: max-content;
     display: inline-block;
-    color: var(--color-call-to-action);
-    padding: 0.6rem 1rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
+    color: var(--color-bg);
+    background-color: var(--color-call-to-action);
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    border: 3px solid var(--color-call-to-action);
     transition: var(--transition-duration);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    margin-top: 0.5rem;
+    margin-right: 1.2rem;
+}
+
+.btn-nofill {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-call-to-action);
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    border: 3px solid var(--color-call-to-action);
+    transition: var(--transition-duration);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight - .2rem);
+    margin-top: 0.5rem;
+    margin-right: 1.2rem;
 }
 
 .btn:hover {
-    background-color: var(--color-call-to-action-hover);
+    background-color: var(--color-accent-1);
+    border-color: transparent;
+    font-size: var(--button-transition-text-size);
+}
+
+.btn-nofill:hover {
+    color: var(--color-bg);
+    background-color: var(--color-accent-1);
+    border-color: var(--color-accent-1);
+    font-weight: var(--button-font-weight);
+    font-size: var(--button-transition-text-size);
 }
 
 img {
@@ -106,7 +158,7 @@ img {
 }
 
 /* _____ MEDIA QUERY (MEDIUM DEVICE) _____ */
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .container {
         width: var(--container-width-md)
     }
@@ -114,10 +166,14 @@ img {
     section {
         margin-top: 6.5rem;
     }
+
+    body {
+        margin-left: 15%;
+    }
 }
 
 /* _____ MEDIA QUERY (SMALL/MOBILE DEVICE) _____ */
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
     .container {
         width: var(--containter-width-sm)
     }
@@ -128,6 +184,10 @@ img {
 
     section > h2{
         margin-bottom: 2rem;
+    }
+
+    body {
+        margin-left: 5%;
     }
 
 }

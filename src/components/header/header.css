@@ -2,3 +2,19 @@ body {
     background: rgb(43, 43, 43);
     color: rgb(213, 213, 213);
 }
+
+.header__container {
+    display: grid;
+    grid-template-columns: 40% 45%;
+    gap: 10%;
+}
+
+.image__container {
+    background: var(--color-bg-variant);
+}
+
+.call-to-action {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
