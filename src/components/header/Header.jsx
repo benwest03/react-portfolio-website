@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 import CallToAction from './CallToAction'
-import {ME} from '../../assets/personalPhoto.png'
+import ME from '../../assets/personalPhoto.png'
 
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
         </div>
 
         <div className="image__container">
-          <img src = {ME} alt = "Personal Photo" />
+          <img src = {ME} alt = "Personal Photo" className='img'/>
         </div>
       </div>
     </section>

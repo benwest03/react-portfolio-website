@@ -7,10 +7,20 @@ body {
     display: grid;
     grid-template-columns: 40% 45%;
     gap: 10%;
+    max-height: 35rem;
+}
+
+img {
+   max-height: 35rem; 
+}
+
+img:hover {
+    color: rgba(224, 61, 61, 0.5)
 }
 
 .image__container {
     background: var(--color-bg-variant);
+    max-height: 35rem;
 }
 
 .call-to-action {
