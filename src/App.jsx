@@ -14,8 +14,8 @@ import './index.css'
 const App = () => {
   return (
     <>
-        <Header />
         <Navbar />
+        <Header />
         <About />
         <Contact />
         <Experience />

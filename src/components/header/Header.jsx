@@ -2,15 +2,15 @@ import React from 'react'
 import './header.css'
 import CallToAction from './CallToAction'
 import ME from '../../assets/personalPhoto.png'
+import STRIPES from '../../assets/stripes.png'
 
 const Header = () => {
   return (
-    <section id = 'header'>
-      <div className="header__container"> 
-        
+    <section id = 'header' class = "section">
+      <div className="header__container">        
         <div className="header__text__container">
           <h4>Hi my name is</h4>
-          <h1>Ben Westphal</h1>
+          <h1 className = "sticky">Ben Westphal</h1>
           <h5 className="text-light">Computer Science Student</h5>
           <div className="call-to-action">
             <CallToAction />

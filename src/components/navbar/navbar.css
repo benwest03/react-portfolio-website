@@ -1,4 +1,10 @@
-body {
-    background: rgb(43, 43, 43);
-    color: rgb(213, 213, 213);
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    min-height: 30px;
+    padding: 1.5rem;
+    z-index: 100;
 }
